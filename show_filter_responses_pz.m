@@ -1,3 +1,5 @@
+
+function [Ak, Bk, HF, Fd, hn, n] = show_filter_responses_pz(poles, zeros, K, fsample, num_F_points, num_h_points, figure_num)
 %function [Ak, Bk, HF, Fd, hn, n] = show_filter_responses_pz(poles, zeros, K, fsample, num_F_points, num_h_points, figure_num)
 %
 %Plots the provided system (poles and zeros and K gain) with several plots:
@@ -7,7 +9,6 @@
 %   -unit sample response given num_h_points 
 %[Ak, Bk, HF, Fd, hn, n] are all of the values calculated in the
 
-function [Ak, Bk, HF, Fd, hn, n] = show_filter_responses_pz(poles, zeros, K, fsample, num_F_points, num_h_points, figure_num)
    Ak = poly(poles);
    Bk = poly(zeros);
    Bk = K .* Bk;
@@ -23,6 +24,6 @@ function [Ak, Bk, HF, Fd, hn, n] = show_filter_responses_pz(poles, zeros, K, fsa
        p
    end
    
-   fprintf('Difference Equation: \n')
-   str = print_difference_equation(Ak, Bk);
+   %fprintf('Difference Equation: \n')
+   %str = print_difference_equation(Ak, Bk);
 end

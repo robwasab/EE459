@@ -1,3 +1,4 @@
+function [hn, n] = unit_sample_response(Bk, Ak, number_of_samples, figure_number)
 %function [hn, n] = unit_sample_response(Bk, Ak, number_of_samples, figure_number)
 %
 %Plots the unit sample response h[n] of a difference equation given Bk
@@ -6,7 +7,7 @@
 %Ak the y[n] coefficients
 %
 %[hn,n] hn is the unit response, n are the corresponding indicies
-function [hn, n] = unit_sample_response(Bk, Ak, number_of_samples, figure_number)
+
    [dn,n] = unit_sample(number_of_samples);
    hn = filter(Bk, Ak, dn);
    
